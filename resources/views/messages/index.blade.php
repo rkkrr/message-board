@@ -8,7 +8,9 @@
         <ul>
             @foreach ($messages as $message)
                 <li>{{ $message->content }}</li>
-            @endforeach
+                <li>{!! link_to_route('messages.show', $message->id, ['id' => $message->id]) !!} : {{ $message->content }}</li>
+                 {!! link_to_route('messages.create', '新規メッセージの投稿') !!}
+                 @endforeach
         </ul>
     @endif
 
