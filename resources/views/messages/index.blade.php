@@ -5,7 +5,7 @@
     <h1>メッセージ一覧</h1>
            
            
-            @if (count($messages) > 0)
+  @if (count($messages) > 0)
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -25,7 +25,9 @@
             </tbody>
         </table>
     @endif
-        </ul>
+    {!! link_to_route('messages.create', '新規メッセージの投稿', null, ['class' => 'btn btn-primary']) !!}
+   
+        
     
 {!! link_to_route('messages.create', '新規メッセージの投稿', null, ['class' => 'btn btn-primary']) !!}
 @endsection
